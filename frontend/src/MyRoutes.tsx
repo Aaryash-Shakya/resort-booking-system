@@ -18,6 +18,7 @@ import Contact from "./pages/Contact";
 import About from "./components/home/About";
 import AdminRoute from "./auth/AdminRoute";
 import AdminSidebar from "./admin/AdminSidebar";
+import ViewHistory from "./admin/ViewHistory";
 
 const MyRoutes: React.FC = () => {
 	return (
@@ -44,6 +45,7 @@ const MyRoutes: React.FC = () => {
 				{/* admin route */}
 				<Route path="/admin" element={<AdminRoute />}>
 					<Route path="dashboard" element={<AdminSidebar />} />
+					<Route path="history" element={<ViewHistory />} />
 				</Route>
 				{/* exceptions */}
 				<Route path="*" element={<PageNotFound />} />

@@ -57,7 +57,6 @@ export class BookingController {
         end_date,
       );
 
-
       // for (let oneBooking in booking) {
       //   // const findBooking: Booking = await this.booking.findBooking({id:oneBooking.});
       //   const tempData = await this.booking.findBooking({
@@ -113,13 +112,13 @@ export class BookingController {
         roomId: Number(roomId),
       };
 
-      const bookingExist: Booking[] = await this.booking.rangeSearchService(
-        start_date,
-        end_date,
-      );
-      if (bookingExist.length > 0) {
-        throw new HttpException(409, "room is already booked for this date");
-      }
+      // const bookingExist: Booking[] = await this.booking.rangeSearchService(
+      //   start_date,
+      //   end_date,
+      // );
+      // if (bookingExist.length > 0) {
+      //   throw new HttpException(409, "room is already booked for this date");
+      // }
 
       const findRoom = await this.room.findOneRoom({ id: roomId });
       if (!findRoom) throw new HttpException(404, "room not found");

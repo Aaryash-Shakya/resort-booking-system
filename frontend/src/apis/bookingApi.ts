@@ -18,4 +18,21 @@ export class BookingApi {
 				return error.response;
 			});
 	}
+
+	static async allBooking(): Promise<AxiosResponse> {
+		return axios
+			.get(`${serverUrl}/bookings/all`, {
+				headers: {
+					"Content-Type": "application/json",
+				},
+			})
+			.then(response => {
+				console.log(response.status, response.data.message);
+				return response;
+			})
+			.catch(error => {
+				console.error("Error occurred in all booking: ", error.status, error.response.data.message);
+				return error.response;
+			});
+	}
 }

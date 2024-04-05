@@ -69,10 +69,14 @@ const Profile: React.FC = () => {
 						</div>
 						<div className="right w-full md:w-2/5 flex flex-col text-white">
 							<h1 className="text-5xl my-4">{user.name}</h1>
-							<p className="text-lg"><span className="font-bold">Email:</span> {user.email}</p>
-							<p className="text-lg"><span className="font-bold">Phone:</span> {user.phone && user.phone}</p>
+							<p className="text-lg">
+								<span className="font-bold">Email:</span> {user.email}
+							</p>
+							<p className="text-lg">
+								<span className="font-bold">Phone:</span> {user.phone && user.phone}
+							</p>
 							<div
-								className="btn-custom-accent w-fit cursor-pointer mt-4"
+								className="w-fit cursor-pointer mt-4 text-white bg-red-500 hover:bg-red-500/80 focus:outline-none focus:ring-4 focus:ring-[#e87030]/30 font-medium rounded-md text-sm px-5 py-2.5 text-center me-2 mb-2 border-none"
 								onClick={() => handleSignOut()}
 							>
 								Sign Out

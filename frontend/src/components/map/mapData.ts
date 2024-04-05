@@ -11,11 +11,13 @@ type roomDataType = {
 	top: string;
 	left: string;
 	status: "booked" | "available" | "cleaning" | "maintenance";
+	name: string;
 };
 
 export const roomData: roomDataType[] = [
 	{
 		id: 1,
+		name: "Lakeside Retreat A",
 		type: "deluxe",
 		top: "31.2%",
 		left: "33%",
@@ -23,6 +25,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 2,
+		name: "Lakeside Retreat B",
 		type: "deluxe",
 		top: "31.9%",
 		left: "41.3%",
@@ -30,6 +33,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 3,
+		name: "Lakeside Retreat C",
 		type: "deluxe",
 		top: "34.1%",
 		left: "50.1%",
@@ -37,6 +41,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 4,
+		name :"Family Escape A",
 		type: "family",
 		top: "43.6%",
 		left: "33.9%",
@@ -44,6 +49,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 5,
+		name :"Family Escape B",
 		type: "family",
 		top: "44.5%",
 		left: "40.1%",
@@ -51,6 +57,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 6,
+		name :"Family Escape C",
 		type: "family",
 		top: "45%",
 		left: "47.2%",
@@ -58,6 +65,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 7,
+		name :"Family Escape D",
 		type: "family",
 		top: "44.8%",
 		left: "54.9%",
@@ -65,6 +73,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 8,
+		name :"Family Escape E",
 		type: "family",
 		top: "36.1%",
 		left: "59.6%",
@@ -72,6 +81,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 9,
+		name :"Family Escape F",
 		type: "family",
 		top: "33.2%",
 		left: "65.1%",
@@ -79,6 +89,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 10,
+		name :"Family Escape G",
 		type: "family",
 		top: "31.1%",
 		left: "78.6%",
@@ -86,6 +97,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 11,
+		name :"Family Escape H",
 		type: "family",
 		top: "29.7%",
 		left: "85.2%",
@@ -93,6 +105,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 12,
+		name :"Family Escape I",
 		type: "family",
 		top: "40.1%",
 		left: "89.4%",
@@ -100,6 +113,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 13,
+		name :"Family Escape J",
 		type: "family",
 		top: "47.1%",
 		left: "92.8%",
@@ -109,6 +123,7 @@ export const roomData: roomDataType[] = [
 	// standard
 	{
 		id: 14,
+		name: "Comfort Room A",
 		type: "standard",
 		top: "60.4%",
 		left: "47.8%",
@@ -116,6 +131,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 15,
+		name: "Comfort Room B",
 		type: "standard",
 		top: "59.7%",
 		left: "59.3%",
@@ -123,6 +139,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 16,
+		name: "Comfort Room C",
 		type: "standard",
 		top: "55.9%",
 		left: "66.7%",
@@ -130,6 +147,7 @@ export const roomData: roomDataType[] = [
 	},
 	{
 		id: 17,
+		name: "Comfort Room D",
 		type: "standard",
 		top: "49.6%",
 		left: "72.7%",
