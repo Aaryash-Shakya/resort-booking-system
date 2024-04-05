@@ -9,8 +9,14 @@ import "swiper/css/navigation";
 
 // import required modules
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
+import { imageData } from "./ImageData";
 
-const RoomCarousel: React.FC = () => {
+type RoomCarouselProps = {
+	type: "deluxe" | "family" | "standard";
+};
+
+const RoomCarousel: React.FC<RoomCarouselProps> = ({ type }) => {
+	const images = imageData[type];
 	return (
 		<>
 			<Swiper
@@ -27,13 +33,19 @@ const RoomCarousel: React.FC = () => {
 				className="mySwiper"
 			>
 				<SwiperSlide>
-					<img src="../../../public/resort-pool.jpg" alt="" className="image-full" />
+					<div className="img-container max-h-96 w-full overflow-hidden">
+						<img src={images[0]} alt="" className="h-full image-full" />
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src="../../../public/resort-pool.jpg" alt="" className="image-full" />
+					<div className="img-container max-h-96 w-full overflow-hidden">
+						<img src={images[1]} alt="" className="h-full image-full" />
+					</div>
 				</SwiperSlide>
 				<SwiperSlide>
-					<img src="../../../public/resort-pool.jpg" alt="" className="image-full" />
+					<div className="img-container max-h-96 w-full overflow-hidden">
+						<img src={images[2]} alt="" className="h-full image-full" />
+					</div>
 				</SwiperSlide>
 			</Swiper>
 		</>

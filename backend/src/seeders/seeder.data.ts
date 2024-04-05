@@ -11,7 +11,7 @@ export const roomSeedData: Rooms[] = [
     top: "31.2%",
     left: "33%",
     status: RoomStatus.AVAILABLE,
-    price: 5000,
+    price: 10000,
     capacity: 2,
   },
   {
@@ -23,7 +23,7 @@ export const roomSeedData: Rooms[] = [
     top: "31.9%",
     left: "41.3%",
     status: RoomStatus.AVAILABLE,
-    price: 6000,
+    price: 12000,
     capacity: 2,
   },
   {
@@ -35,7 +35,7 @@ export const roomSeedData: Rooms[] = [
     top: "34.1%",
     left: "50.1%",
     status: RoomStatus.AVAILABLE,
-    price: 7000,
+    price: 12000,
     capacity: 2,
   },
   {
@@ -47,7 +47,7 @@ export const roomSeedData: Rooms[] = [
     top: "43.6%",
     left: "33.9%",
     status: RoomStatus.AVAILABLE,
-    price: 8000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -59,7 +59,7 @@ export const roomSeedData: Rooms[] = [
     top: "44.5%",
     left: "40.1%",
     status: RoomStatus.AVAILABLE,
-    price: 9000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -71,7 +71,7 @@ export const roomSeedData: Rooms[] = [
     top: "45%",
     left: "47.2%",
     status: RoomStatus.BOOKED,
-    price: 10000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -83,7 +83,7 @@ export const roomSeedData: Rooms[] = [
     top: "44.8%",
     left: "54.9%",
     status: RoomStatus.BOOKED,
-    price: 11000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -95,7 +95,7 @@ export const roomSeedData: Rooms[] = [
     top: "36.1%",
     left: "59.6%",
     status: RoomStatus.BOOKED,
-    price: 12000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -107,7 +107,7 @@ export const roomSeedData: Rooms[] = [
     top: "33.2%",
     left: "65.1%",
     status: RoomStatus.BOOKED,
-    price: 13000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -119,7 +119,7 @@ export const roomSeedData: Rooms[] = [
     top: "31.1%",
     left: "78.6%",
     status: RoomStatus.BOOKED,
-    price: 14000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -131,7 +131,7 @@ export const roomSeedData: Rooms[] = [
     top: "29.7%",
     left: "85.2%",
     status: RoomStatus.BOOKED,
-    price: 15000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -143,7 +143,7 @@ export const roomSeedData: Rooms[] = [
     top: "40.1%",
     left: "89.4%",
     status: RoomStatus.CLEANING,
-    price: 16000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -155,7 +155,7 @@ export const roomSeedData: Rooms[] = [
     top: "47.1%",
     left: "92.8%",
     status: RoomStatus.CLEANING,
-    price: 17000,
+    price: 6000,
     capacity: 5,
   },
   {
@@ -167,7 +167,7 @@ export const roomSeedData: Rooms[] = [
     top: "60.4%",
     left: "47.8%",
     status: RoomStatus.CLEANING,
-    price: 18000,
+    price: 6000,
     capacity: 3,
   },
   {
@@ -179,7 +179,7 @@ export const roomSeedData: Rooms[] = [
     top: "59.7%",
     left: "59.3%",
     status: RoomStatus.CLEANING,
-    price: 19000,
+    price: 5000,
     capacity: 3,
   },
   {
@@ -191,7 +191,7 @@ export const roomSeedData: Rooms[] = [
     top: "55.9%",
     left: "66.7%",
     status: RoomStatus.CLEANING,
-    price: 20000,
+    price: 5000,
     capacity: 3,
   },
   {
@@ -202,7 +202,7 @@ export const roomSeedData: Rooms[] = [
     top: "49.6%",
     left: "72.7%",
     status: RoomStatus.MAINTENANCE,
-    price: 21000,
+    price: 6000,
     capacity: 4,
   },
 ];

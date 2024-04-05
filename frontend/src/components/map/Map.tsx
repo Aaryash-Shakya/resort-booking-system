@@ -6,6 +6,7 @@ import { FaCircle } from "react-icons/fa";
 import { FaHouse } from "react-icons/fa6";
 import { HiMiniXMark } from "react-icons/hi2";
 import { RoomApi } from "../../apis/roomApi";
+import { MdTouchApp } from "react-icons/md";
 
 type MapProps = {
 	image: string;
@@ -17,7 +18,7 @@ const Map = ({ image, alt, ref }: MapProps) => {
 	const [dx, setDx] = React.useState(0);
 	const [dy, setDy] = React.useState(0);
 	const [zoom, setZoom] = React.useState(1);
-	const [showLegend, setShowLegend] = useState(false);
+	const [showLegend, setShowLegend] = useState(true);
 
 	const resetAll = () => {
 		setDx(0);
@@ -49,9 +50,7 @@ const Map = ({ image, alt, ref }: MapProps) => {
 		const roomData: RoomType[] = response.data.data;
 		setRoomData(roomData);
 
-		return roomData.map(room => (
-			<MapElement top={room.top} left={room.left} id={room.id} type={room.type} />
-		))
+		return roomData.map(room => <MapElement top={room.top} left={room.left} id={room.id} type={room.type} />);
 	};
 
 	// note: stopPropagation() didn't perform as expected
@@ -78,23 +77,23 @@ const Map = ({ image, alt, ref }: MapProps) => {
 		<div className="relative bg-slate-400 w-full overflow-clip" id="map-container">
 			{/* map navigation button */}
 			<div className="absolute right-2 z-10 top-2 rounded bg-white shadow divide-y divide-slate-300">
-				<div onClick={zoomIn} className="text-center cursor-pointer h-10 w-10 hover:bg-slate-100">
+				<div onClick={zoomIn} className="text-center cursor-pointer h-10 w-10 hover:bg-slate-200">
 					<GoZoomIn className="map-nav-button" />
 				</div>
-				<div className="text-center cursor-pointer h-10 w-10 py-2 hover:bg-slate-100 text-[#4C68C1]">
+				<div className="text-center cursor-pointer h-10 w-10 py-2 hover:bg-slate-200 text-[#4C68C1]">
 					x{zoom.toFixed(1)}
 				</div>
-				<div onClick={zoomOut} className="text-center cursor-pointer h-10 w-10 hover:bg-slate-100">
+				<div onClick={zoomOut} className="text-center cursor-pointer h-10 w-10 hover:bg-slate-200">
 					<GoZoomOut className="map-nav-button" />
 				</div>
-				<div onClick={resetAll} className="text-center cursor-pointer h-10 w-10 hover:bg-slate-100">
+				<div onClick={resetAll} className="text-center cursor-pointer h-10 w-10 hover:bg-slate-200">
 					<GoScreenFull className="map-nav-button" />
 				</div>
 			</div>
 			<div className="absolute right-2 z-10 bottom-2 rounded bg-white shadow divide-y divide-slate-300">
 				<div
 					onClick={() => setShowLegend(!showLegend)}
-					className="text-center cursor-pointer h-10 w-10 hover:bg-slate-100"
+					className={`text-center cursor-pointer h-10 w-10 hover:bg-slate-200 ${showLegend && "bg-slate-300"}`}
 				>
 					<GoInfo className="map-nav-button" />
 				</div>
@@ -115,7 +114,7 @@ const Map = ({ image, alt, ref }: MapProps) => {
 
 				{/* map elements */}
 				{roomData.map(room => (
-					<MapElement top={room.top} left={room.left} id={room.id} type={room.type} key={room.id}/>
+					<MapElement top={room.top} left={room.left} id={room.id} type={room.type} key={room.id} />
 				))}
 			</PanViewer>
 
@@ -152,6 +151,10 @@ const Map = ({ image, alt, ref }: MapProps) => {
 						<div className="w-full flex justify-start items-center">
 							<FaCircle className="text-3xl me-3 text-[#55e]" />
 							Selected
+						</div>
+						<div className="w-full flex justify-center items-center border-t border-black text-center">
+							<MdTouchApp className="text-4xl me-3 text-black" />
+							Tap on the icons to interact with them
 						</div>
 					</div>
 				</>

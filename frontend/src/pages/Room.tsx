@@ -1,6 +1,5 @@
 import React from "react";
 import Map from "../components/map/Map";
-import RoomCarousel from "../components/room/RoomCarousel";
 import RoomDetails from "../components/room/RoomDetails";
 import ReactTailwindcssDatePicker from "../components/room/ReactTailwindcssDatepicker";
 
@@ -14,7 +13,6 @@ const Room: React.FC = () => {
 				</div>
 				<div className="room-details w-full md:w-1/2 md:mx-4 mb-4 overflow-hidden bg-custom-bg-light text-black">
 					<div className="flex flex-col">
-						<RoomCarousel />
 						<RoomDetails />
 					</div>
 				</div>
