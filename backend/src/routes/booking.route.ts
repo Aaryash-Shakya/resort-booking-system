@@ -35,7 +35,7 @@ export class BookingRoute implements Routes {
 
     this.router.delete(
       `${this.path}/delete/:id(\\d+)`,
-      AuthorizationMiddleware.adminAuthorization,
+      // AuthorizationMiddleware.adminAuthorization,
       this.bookingController.deleteBooking,
     );
 
