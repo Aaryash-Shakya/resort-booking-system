@@ -88,7 +88,7 @@ const RoomDetails: React.FC = () => {
 					<p>Per Night</p>
 				</div>
 				<div></div>
-				<Link to={'/booking-detail'} className="btn text-lg rounded-none text-white border-white hover:border-custom-accent bg-custom-accent hover:bg-custom-bg-dark hover:text-custom-accent font-ostwald">
+				<Link to={`/payment/${roomId}`} className="btn text-lg rounded-none text-white border-white hover:border-custom-accent bg-custom-accent hover:bg-custom-bg-dark hover:text-custom-accent font-ostwald">
 					BOOK
 				</Link>
 			</div>

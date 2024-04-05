@@ -39,7 +39,7 @@ const MyRoutes: React.FC = () => {
 				{/* private route */}
 				<Route path="" element={<PrivateRoute />}>
 					<Route path="profile" element={<Profile />} />
-					<Route path="/payment" element={<Payment />} />
+					<Route path="/payment/:roomId" element={<Payment />} />
 				</Route>
 				{/* exceptions */}
 				<Route path="*" element={<PageNotFound />} />
