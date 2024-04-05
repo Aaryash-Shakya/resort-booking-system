@@ -1,3 +1,5 @@
+import { Rooms } from "./rooms.interface";
+
 export interface Booking {
   id?: number;
   start_date: string;

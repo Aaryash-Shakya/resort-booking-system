@@ -7,9 +7,12 @@ import {
   CreateDateColumn,
   DeleteDateColumn,
   Entity,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from "typeorm";
+import { BookingEntity } from "./booking.entity";
+import { Booking } from "@/interfaces/booking.interface";
 
 @Entity()
 export class RoomsEntity extends BaseEntity implements Rooms {
@@ -52,6 +55,12 @@ export class RoomsEntity extends BaseEntity implements Rooms {
   @Column()
   @IsNotEmpty()
   left: string;
+
+  @Column({
+    default: null,
+  })
+  @ManyToOne(() => BookingEntity, (booking) => booking.id, { nullable: true })
+  bookingId: number;
 
   @Column()
   @CreateDateColumn()

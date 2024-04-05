@@ -7,6 +7,7 @@ import {
   Entity,
   JoinColumn,
   ManyToOne,
+  OneToMany,
   OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
@@ -15,6 +16,7 @@ import { UserEntity } from "./users.entity";
 import { RoomsEntity } from "./rooms.entity";
 import { PaymentEntity } from "./payment.entity";
 import { BookingStatus } from "@/enums/booking.enum";
+import { Rooms } from "@/interfaces/rooms.interface";
 
 @Entity()
 export class BookingEntity extends BaseEntity implements Booking {
@@ -36,10 +38,9 @@ export class BookingEntity extends BaseEntity implements Booking {
   @ManyToOne(() => UserEntity, (user) => user.id)
   @JoinColumn()
   userId: number;
-  
+
   @Column()
-  @OneToOne(() => RoomsEntity, (room) => room.id)
-  @JoinColumn()
+  @OneToMany(() => RoomsEntity, (room) => room.id)
   roomId: number;
 
   // @OneToOne(() => PaymentEntity, (payment) => payment.id)

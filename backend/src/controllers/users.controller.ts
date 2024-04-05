@@ -323,6 +323,7 @@ export class UserController {
     try {
       const userId = Number(req.params.id);
       const userData: User = req.body;
+
       const updateUserData: User = await this.user.updateUser(userId, userData);
 
       res.status(200).json({

@@ -57,7 +57,6 @@ export class BookingController {
         end_date,
       );
 
-
       // for (let oneBooking in booking) {
       //   // const findBooking: Booking = await this.booking.findBooking({id:oneBooking.});
       //   const tempData = await this.booking.findBooking({
@@ -104,13 +103,12 @@ export class BookingController {
     try {
       const { start_date, end_date, extras, roomId } = req.body;
       const userId: number = Number(req.params.userId);
-
       const bookingData: Booking = {
         start_date,
         end_date,
         extras,
         userId: userId,
-        roomId: Number(roomId),
+        roomId,
       };
 
       const bookingExist: Booking[] = await this.booking.rangeSearchService(
@@ -124,13 +122,17 @@ export class BookingController {
       const findRoom = await this.room.findOneRoom({ id: roomId });
       if (!findRoom) throw new HttpException(404, "room not found");
 
-      const updateRoom = await this.room.updateRoom(roomId, {
+      let updateRoom = await this.room.updateRoom(roomId, {
         status: RoomStatus.BOOKED,
       });
 
       const booking = await this.booking.createBooking(bookingData);
       if (!booking) throw new HttpException(409, "booking not created");
 
+      updateRoom = await this.room.updateRoom(roomId, {
+        bookingId: booking.id,
+      });
+      
       const findBooking = await this.booking.findBooking({ id: booking.id });
 
       const findUser: User = await this.user.findUser({ id: booking.userId });
@@ -158,10 +160,11 @@ export class BookingController {
   ): Promise<void> => {
     try {
       const id = Number(req.params.id);
+      const roomId = Number(req.params.roomId);
       const booking = await this.booking.deleteBooking({ id: id });
       if (!booking)
         throw new HttpException(404, `no booking with ${id}  exist`);
-      const updateRoom = await this.room.updateRoom(booking.roomId, {
+      const updateRoom = await this.room.updateRoom(roomId, {
         status: RoomStatus.AVAILABLE,
       });
       if (!updateRoom)
@@ -184,6 +187,7 @@ export class BookingController {
   ): Promise<void> => {
     try {
       const id = Number(req.params.id);
+      const roomId = Number(req.params.roomId);
       const decoded: Payload = req.body.decoded;
 
       if (!decoded) {
@@ -200,7 +204,7 @@ export class BookingController {
       console.log(2);
 
       console.log(4);
-      const updateRoom = await this.room.updateRoom(booking.roomId, {
+      const updateRoom = await this.room.updateRoom(roomId, {
         status: RoomStatus.AVAILABLE,
       });
       console.log(5);
