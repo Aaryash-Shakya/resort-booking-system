@@ -2,7 +2,6 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Room from "./pages/Room";
-// import Book from "./pages/Book";
 import Signup from "./pages/SignUp";
 import FixedNavLayout from "./layouts/FixedNavLayout";
 import BasicLayout from "./layouts/BasicLayout";
@@ -32,7 +31,6 @@ const MyRoutes: React.FC = () => {
 					<Route path="/rooms" element={<Room />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
-					{/* <Route path="/book" element={<Book />} /> */}
 				</Route>
 				<Route path="" element={<FixedNavLayout />}>
 					<Route path="/signup" element={<Signup />} />
@@ -43,17 +41,9 @@ const MyRoutes: React.FC = () => {
 				</Route>
 				{/* private route */}
 				<Route path="" element={<PrivateRoute />}>
-					<Route path="/profile" element={<Profile />} />
-				</Route>
-				{/* admin route */}
-				<Route path="/admin" element={<AdminRoute />}>
-					<Route path="dashboard" element={<AdminSidebar />} />
-					<Route path="history" element={<ViewHistory />} />
-					<Route path="manage-users" element={<ManageUsers />} />
-					<Route path="all-rooms" element={<ViewRoom />} />
+					<Route path="profile" element={<Profile />} />
 				</Route>
 				{/* exceptions */}
-				<Route path="/payment" element={<Payment />} />
 				<Route path="*" element={<PageNotFound />} />
 				<Route path="/unauthorized" element={<Unauthorized />} />
 			</Routes>

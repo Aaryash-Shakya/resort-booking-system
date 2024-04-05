@@ -6,6 +6,7 @@ import { TbRulerMeasure } from "react-icons/tb";
 import { useRoomStore } from "../../store/useRoomStore";
 import { RoomApi } from "../../apis/roomApi";
 import RoomCarousel from "./RoomCarousel";
+import { Link } from "react-router-dom";
 
 const RoomDetails: React.FC = () => {
 	const roomId = useRoomStore(state => state.selectedRoom);
@@ -87,9 +88,9 @@ const RoomDetails: React.FC = () => {
 					<p>Per Night</p>
 				</div>
 				<div></div>
-				<div className="btn text-lg rounded-none text-white border-white hover:border-custom-accent bg-custom-accent hover:bg-custom-bg-dark hover:text-custom-accent font-ostwald">
+				<Link to={`/payment/${roomId}`} className="btn text-lg rounded-none text-white border-white hover:border-custom-accent bg-custom-accent hover:bg-custom-bg-dark hover:text-custom-accent font-ostwald">
 					BOOK
-				</div>
+				</Link>
 			</div>
 		</>
 	);
