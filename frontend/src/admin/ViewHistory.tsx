@@ -47,13 +47,14 @@ const ViewHistory: React.FC = () => {
 	};
 
 	const mapBookingsRow = (userBookings: UserBookingsType[]) => {
-		return userBookings.map((booking, key) => {
+		let count = 1;
+		return userBookings.map((booking) => {
 			console.log(booking.userId, user_id);
 			if (booking.userId == parseInt(user_id)) {
 				return (
 					<tr className="hover:backdrop-brightness-95 text-lg" key={booking.id}>
 						<td>
-							<div className="font-bold">{key + 1}</div>
+							<div className="font-bold">{count++}</div>
 						</td>
 						<td>
 							<div className="font-bold">{booking.userId}</div>
@@ -83,6 +84,7 @@ const ViewHistory: React.FC = () => {
 							</button>
 						</td>
 					</tr>
+					
 				);
 			}
 		});
@@ -115,20 +117,19 @@ const ViewHistory: React.FC = () => {
 	};
 	return (
 		<>
-			<div className="w-full p-4 nav-margin ps-24">
-				<div className="overflow-x-auto border border-white">
+			<div className="container w-full p-4 nav-margin ps-24">
+				<div className="overflow-x-auto border border-white shadow-lg">
 					{showSuccessMessage()}
 					{showErrorMessage()}
-					<table className="table">
+					<table className="table table-zebra">
 						{/* head */}
-						<thead className="text-lg text-base-content bg-base-200">
+						<thead className="text-lg text-base-content bg-custom-bg-dark border-b-2 border-white">
 							<tr>
 								<th>S.N.</th>
 								<th>User ID</th>
 								<th>Room Name</th>
 								<th>Check In</th>
 								<th>Check Out</th>
-								<th>Actions</th>
 							</tr>
 						</thead>
 						<tbody>{mapBookingsRow(userBookings)}</tbody>

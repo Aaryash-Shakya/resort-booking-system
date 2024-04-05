@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
 import { GoXCircleFill } from "react-icons/go";
 import { RoomApi } from "../apis/roomApi";
+import { useRoomStore } from "../store/useRoomStore";
+import { useNavigate } from "react-router-dom";
 
 type RoomsType = {
 	id: number;
@@ -19,6 +21,7 @@ type RoomsType = {
 };
 
 const ViewRoom: React.FC = () => {
+	const navigate = useNavigate();
 	const [rooms, setRooms] = useState<RoomsType[]>([]);
 	const [errorMessage, setErrorMessage] = useState<string>("");
 	const [successMessage, setSuccessMessage] = useState<string>("");
@@ -67,6 +70,17 @@ const ViewRoom: React.FC = () => {
 							<div className="font-bold">{room.price}</div>
 						</div>
 					</td>
+					<td>
+						<button
+							className="btn-custom-accent"
+							onClick={() => {
+								useRoomStore.setState({ selectedRoom: room.id });
+								navigate(`/rooms`);
+							}}
+						>
+							details
+						</button>
+					</td>
 				</tr>
 			);
 		});
@@ -99,19 +113,20 @@ const ViewRoom: React.FC = () => {
 	};
 	return (
 		<>
-			<div className="w-full p-4 nav-margin ps-24">
+			<div className="container w-full p-4 nav-margin ps-24">
 				<div className="overflow-x-auto border border-white">
 					{showSuccessMessage()}
 					{showErrorMessage()}
-					<table className="table">
+					<table className="table table-zebra">
 						{/* head */}
-						<thead className="text-lg text-base-content bg-base-200">
+						<thead className="text-lg text-base-content bg-custom-bg-dark border-b-2 border-white">
 							<tr>
 								<th>S.N.</th>
 								<th>Room Name</th>
 								<th>Capacity</th>
 								<th>Type</th>
 								<th>Price</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>{mapRoomsRow(rooms)}</tbody>

@@ -44,7 +44,7 @@ const ManageUsers: React.FC = () => {
 	const mapUsersRow = (users: UserType[]) => {
 		return users.map((user, key) => {
 			return (
-				<tr className="hover:backdrop-brightness-95 text-lg" key={user.id}>
+				<tr className={`hover:backdrop-brightness-95 text-lg ${key%2 == 0 }`} key={user.id}>
 					<td>
 						<div className="font-bold">{key + 1}</div>
 					</td>
@@ -101,13 +101,13 @@ const ManageUsers: React.FC = () => {
 	};
 	return (
 		<>
-			<div className="w-full p-4 nav-margin ps-24">
-				<div className="overflow-x-auto border border-white">
+			<div className="container w-full p-4 nav-margin ps-24">
+				<div className="overflow-x-auto border border-white shadow-lg">
 					{showSuccessMessage()}
 					{showErrorMessage()}
-					<table className="table">
+					<table className="table table-zebra">
 						{/* head */}
-						<thead className="text-lg text-base-content bg-base-200">
+						<thead className="text-lg text-base-content bg-custom-bg-dark border-b-2 border-b-white">
 							<tr>
 								<th>S.N.</th>
 								<th>User ID</th>
