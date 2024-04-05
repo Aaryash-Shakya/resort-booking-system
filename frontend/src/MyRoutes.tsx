@@ -20,6 +20,7 @@ import AdminRoute from "./auth/AdminRoute";
 import AdminSidebar from "./admin/AdminSidebar";
 import ViewHistory from "./admin/ViewHistory";
 import Payment from "./pages/Payment";
+import ManageUsers from "./admin/ManageUsers";
 
 const MyRoutes: React.FC = () => {
 	return (
@@ -47,6 +48,7 @@ const MyRoutes: React.FC = () => {
 				<Route path="/admin" element={<AdminRoute />}>
 					<Route path="dashboard" element={<AdminSidebar />} />
 					<Route path="history" element={<ViewHistory />} />
+					<Route path="manage-users" element={<ManageUsers />} />
 				</Route>
 				{/* exceptions */}
 				<Route path="/payment" element={<Payment />} />

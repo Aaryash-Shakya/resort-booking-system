@@ -10,7 +10,7 @@ const AdminSidebar: React.FC = () => {
 		<>
 			<ul className="menu bg-base-200 fixed top-0 left-0 pt-20 h-screen gap-2">
 				<li>
-					<Link to="/admin/all-rooms" className="tooltip tooltip-right" data-tip="All Event">
+					<Link to="/admin/all-rooms" className="tooltip tooltip-right" data-tip="All Rooms">
 						<FaRegCalendar size={30} />
 					</Link>
 				</li>

@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRight } from "react-icons/fa";
-import { LuUserCircle2 } from "react-icons/lu";
+import { LuLayoutDashboard, LuUserCircle2 } from "react-icons/lu";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useUiAvatar } from "../hooks/useUiAvatar";
 import { useUserStore } from "../store/useUserStore";
+import { isAuthenticated } from "../auth/authIndex";
 
 type NavbarProps = {
 	positionFixed: boolean;
@@ -15,6 +16,13 @@ const Navbar: React.FC<NavbarProps> = ({ positionFixed }) => {
 	const userName = localStorage.getItem("name");
 
 	const navigate = useNavigate();
+
+	const [auth, setAuth] = useState<false | "admin" | "user" | null>(null);
+	if (useUserStore.getState().isAuthenticated !== "admin" || useUserStore.getState().isAuthenticated !== "guest") {
+		isAuthenticated().then((res: false | "admin" | "guest" | null) => {
+			return setAuth(res as false | "admin" | "user" | null);
+		});
+	}
 
 	const handleSignOut = () => {
 		localStorage.removeItem("jwt");
@@ -154,6 +162,17 @@ const Navbar: React.FC<NavbarProps> = ({ positionFixed }) => {
 							</ul>
 						</div>
 						<div className="navbar-end">
+							{auth === null && <></>}
+							{auth === "admin" && (
+								<Link
+									to="/admin/dashboard"
+									role="button"
+									className="btn btn-ghost btn-circle avatar"
+									title="Dashboard"
+								>
+									<LuLayoutDashboard size={30} />
+								</Link>
+							)}
 							{localStorage.getItem("jwt") ? (
 								<div className="dropdown dropdown-end">
 									<div tabIndex={0} role="button" className="m-1">
