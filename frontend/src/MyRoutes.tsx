@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Room from "./pages/Room";
-import Book from "./pages/Book";
+// import Book from "./pages/Book";
 import Signup from "./pages/SignUp";
 import FixedNavLayout from "./layouts/FixedNavLayout";
 import BasicLayout from "./layouts/BasicLayout";
@@ -16,6 +16,7 @@ import ResetPassword from "./pages/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword";
 import Contact from "./pages/Contact";
 import About from "./components/home/About";
+import Payment from "./pages/Payment";
 
 const MyRoutes: React.FC = () => {
 	return (
@@ -26,7 +27,7 @@ const MyRoutes: React.FC = () => {
 					<Route path="/rooms" element={<Room />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
-					<Route path="/book" element={<Book />} />
+					{/* <Route path="/book" element={<Book />} /> */}
 				</Route>
 				<Route path="" element={<FixedNavLayout />}>
 					<Route path="/signup" element={<Signup />} />
@@ -40,6 +41,7 @@ const MyRoutes: React.FC = () => {
 					<Route path="profile" element={<Profile />} />
 				</Route>
 				{/* exceptions */}
+				<Route path="/payment" element={<Payment />} />
 				<Route path="*" element={<PageNotFound />} />
 				<Route path="/unauthorized" element={<Unauthorized />} />
 			</Routes>
