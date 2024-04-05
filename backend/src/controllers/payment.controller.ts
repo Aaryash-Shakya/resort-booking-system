@@ -17,9 +17,12 @@ export class PaymentController {
         },
       ],
       mode: "payment",
-      return_url: `${process.env.FRONTEND_URL}/return?session_id={CHECKOUT_SESSION_ID}`,
+      success_url: `${process.env.FRONTEND_URL}?success=true`,
+      cancel_url: `${process.env.FRONTEND_URL}?canceled=true`,
+      // return_url: `${process.env.FRONTEND_URL}/return?session_id={CHECKOUT_SESSION_ID}`,
     });
-    res.send({ clientSecret: session.client_secret });
+    // res.send({ clientSecret: session.client_secret });
+    res.redirect(303, session.url);
   };
 
   // send stripe api key to frontend

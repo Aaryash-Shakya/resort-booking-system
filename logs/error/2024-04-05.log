@@ -151,3 +151,75 @@ TSError: ⨯ Unable to compile TypeScript:
 2024-04-05 09:44:33 error: [GET] /bookings/2 >> StatusCode:: 409, Message:: no booking with 2  exist 😔
 2024-04-05 09:51:55 error: [GET] /bookings/2 >> StatusCode:: 409, Message:: no booking with 2  exist 😔
 2024-04-05 09:52:08 error: [GET] /bookings/2 >> StatusCode:: 409, Message:: no booking with 2  exist 😔
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:45 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:18:56 error: [POST] /bookings/range >> StatusCode:: 404, Message:: no booking between 2024-04-05 and 2024-04-06 exist
+2024-04-05 11:52:20 error: [GET] /rooms >> StatusCode:: 500, Message:: No repository for "RoomsEntity" was found. Looks like this entity is not registered in current "default" connection?
+2024-04-05 11:52:20 error: [GET] /rooms >> StatusCode:: 500, Message:: No repository for "RoomsEntity" was found. Looks like this entity is not registered in current "default" connection?
+2024-04-05 11:52:20 error: [POST] /rooms/find-room >> StatusCode:: 500, Message:: No repository for "RoomsEntity" was found. Looks like this entity is not registered in current "default" connection?
+2024-04-05 11:52:20 error: [POST] /rooms/find-room >> StatusCode:: 500, Message:: No repository for "RoomsEntity" was found. Looks like this entity is not registered in current "default" connection?
