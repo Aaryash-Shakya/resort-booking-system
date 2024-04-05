@@ -6,6 +6,8 @@ import { TbRulerMeasure } from "react-icons/tb";
 import { useRoomStore } from "../../store/useRoomStore";
 import { RoomApi } from "../../apis/roomApi";
 import RoomCarousel from "./RoomCarousel";
+import { BookingApi } from "../../apis/bookingApi";
+import { ToastContainer, toast } from "react-toastify";
 
 const RoomDetails: React.FC = () => {
 	const roomId = useRoomStore(state => state.selectedRoom);
@@ -32,9 +34,32 @@ const RoomDetails: React.FC = () => {
 		fetchRoomDetails();
 	}, [roomId]);
 
+	const handleBooking = async () => {
+		toast.info("Booking in progress...", {
+			position: "top-left",
+			theme: "dark",
+			autoClose: 5000,
+		});
+		const response = await BookingApi.create({ roomId: useRoomStore.getState().selectedRoom.toString() });
+		if (response.status == 201) {
+			// alert("success");
+			toast.success("Booking Successful. Redirecting...", {
+				position: "top-left",
+				theme: "dark",
+				autoClose: 2000,
+			});
+		} else {
+			toast.error("Something went wrong", {
+				position: "top-left",
+				theme: "dark",
+			});
+		}
+	};
+
 	return (
 		<>
-			<RoomCarousel type={roomDetails.type}/>
+			<ToastContainer />
+			<RoomCarousel type={roomDetails.type} />
 			<div className="p-4 lg:px-10">
 				{/* heading */}
 				<h2 className=" text-black text-4xl font-bold">{roomDetails.name}</h2>
@@ -87,7 +112,10 @@ const RoomDetails: React.FC = () => {
 					<p>Per Night</p>
 				</div>
 				<div></div>
-				<div className="btn text-lg rounded-none text-white border-white hover:border-custom-accent bg-custom-accent hover:bg-custom-bg-dark hover:text-custom-accent font-ostwald">
+				<div
+					className="btn text-lg rounded-none text-white border-white hover:border-custom-accent bg-custom-accent hover:bg-custom-bg-dark hover:text-custom-accent font-ostwald"
+					onClick={handleBooking}
+				>
 					BOOK
 				</div>
 			</div>

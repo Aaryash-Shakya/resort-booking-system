@@ -56,14 +56,13 @@ const MapElement: React.FC<MapElementProps> = ({ top, left, id, type }) => {
 			<div
 				className={`absolute h-6 w-6 cursor-pointer flex-center text-xl lg:text-2xl
 					${status == "available" ? "text-green-400" : ""} 
-					${status == "cleaning" && "text-green-400"} 
 					${status == "booked" ? "text-red-600" : "text-green-400"}
 					${id == selectedId && "text-[#5555ee]"} `}
 				style={{
 					top: `${top}`,
 					left: `${left}`,
 					translate: "-50% -50%",
-					// color: `${id == selectedId && status == "booked" ? "#55e" : ""}`,
+					color: `${id == selectedId ? "#55e" : ""}`,
 					cursor: `${status == "maintenance" && "not-allowed"}`,
 				}}
 				onClick={() => {
@@ -72,7 +71,7 @@ const MapElement: React.FC<MapElementProps> = ({ top, left, id, type }) => {
 					} else if (status == "booked") {
 						setSelectedRoom(id);
 						toast.info("Room is already booked", {
-							position: "top-right",
+							position: "top-left",
 							theme: "dark",
 							autoClose: 1500,
 						});
