@@ -95,7 +95,7 @@ const EditUser: React.FC = () => {
 
 	return (
 		<>
-			<div className="bg-opacity-90 bg-base-100 rounded-xl flex-col mx-auto lg:p-10 md:px-7 px-4 py-10 gap-5 w-full max-w-xl">
+			<div className="bg-opacity-90 bg-custom-bg-dark border saturate-[0.8] border-custom-bg-light rounded-xl flex-col mx-auto lg:p-10 md:px-7 px-4 py-10 gap-5 w-full max-w-xl text-white">
 				<p className="text-3xl font-bold text-center">Update your Profile</p>
 				<p className="text-lg text-center">Keep your information current and make your profile shine!</p>
 
@@ -134,9 +134,15 @@ const EditUser: React.FC = () => {
 							value={phone}
 						/>
 					</label>
-					<div
+					{/* <div
 						onClick={handleUpdate}
 						className="btn btn-primary btn-circle w-full max-w-lg mt-5 text-lg text-white"
+					>
+						Update
+					</div> */}
+					<div
+						onClick={handleUpdate}
+						className="text-white bg-[#E87030] hover:bg-[#e87030]/80 focus:outline-none focus:ring-4 focus:ring-[#e87030]/30 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 border-none w-full mt-4"
 					>
 						Update
 					</div>
