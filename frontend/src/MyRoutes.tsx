@@ -16,6 +16,8 @@ import ResetPassword from "./pages/ResetPassword";
 import ForgotPassword from "./pages/ForgotPassword";
 import Contact from "./pages/Contact";
 import About from "./components/home/About";
+import AdminRoute from "./auth/AdminRoute";
+import AdminSidebar from "./admin/AdminSidebar";
 import Payment from "./pages/Payment";
 
 const MyRoutes: React.FC = () => {
@@ -38,7 +40,11 @@ const MyRoutes: React.FC = () => {
 				</Route>
 				{/* private route */}
 				<Route path="" element={<PrivateRoute />}>
-					<Route path="profile" element={<Profile />} />
+					<Route path="/profile" element={<Profile />} />
+				</Route>
+				{/* admin route */}
+				<Route path="/admin" element={<AdminRoute />}>
+					<Route path="dashboard" element={<AdminSidebar />} />
 				</Route>
 				{/* exceptions */}
 				<Route path="/payment" element={<Payment />} />

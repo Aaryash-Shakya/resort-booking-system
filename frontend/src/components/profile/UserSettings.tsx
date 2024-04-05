@@ -83,7 +83,7 @@ const UserSettings: React.FC = () => {
 			<div className="container mx-auto max-w-lg flex flex-col items- justify-center gap-4 p-4">
 				<h1 className="text-4xl font-bold border-b-2">Account Settings</h1>
 
-				<div className="collapse collapse-arrow bg-base-100 border-2">
+				<div className="collapse collapse-arrow bg-custom-bg-dark saturate-[0.9] border-2">
 					<input type="radio" name="my-accordion-2" defaultChecked />
 					<div className="collapse-title">
 						<h2 className="font-semibold text-lg">Change Password</h2>
@@ -138,7 +138,7 @@ const UserSettings: React.FC = () => {
 							</label>
 							<div
 								onClick={handleChangePassword}
-								className="btn btn-primary btn-circle w-full max-w-lg mt-5 text-lg text-white"
+								className="text-white bg-[#E87030] hover:bg-[#e87030]/80 focus:outline-none focus:ring-4 focus:ring-[#e87030]/30 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 border-none w-full mt-4"
 							>
 								Change Password
 							</div>
@@ -146,7 +146,7 @@ const UserSettings: React.FC = () => {
 					</div>
 				</div>
 
-				<div className="collapse collapse-arrow bg-base-100 border-2">
+				<div className="collapse collapse-arrow bg-custom-bg-dark saturate-[0.9] border-2">
 					<input type="radio" name="my-accordion-2" />
 					<div className="collapse-title">
 						<h2 className="font-semibold text-lg text-rose-600">Delete Account</h2>
@@ -199,7 +199,7 @@ const UserSettings: React.FC = () => {
 							{confirmState === false ? (
 								<div
 									onClick={handleDeleteAccount}
-									className={`btn btn-primary btn-circle w-full max-w-lg mt-5 text-lg text-white ${
+									className={`text-white bg-[#E87030] hover:bg-[#e87030]/80 focus:outline-none focus:ring-4 focus:ring-[#e87030]/30 font-medium rounded-full text-lg px-5 py-2.5 text-center me-2 mb-2 border-none w-full mt-4 ${
 										disableDeleteButton ? "opacity-30 cursor-wait" : ""
 									}`}
 								>

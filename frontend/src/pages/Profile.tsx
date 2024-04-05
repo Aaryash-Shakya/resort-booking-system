@@ -59,7 +59,7 @@ const Profile: React.FC = () => {
 		<>
 			<ToastContainer />
 			<div className="bg-base-100 py-5 nav-margin">
-				<div className="container bg-base-100 max-w-4xl min-h-screen mx-auto rounded-lg overflow-hidden shadow-lg border">
+				<div className="container bg-custom-bg-dark max-w-4xl min-h-screen mx-auto rounded-lg overflow-hidden shadow-lg border">
 					<div className="profile-header flex flex-col md:flex-row justify-evenly items-center mx-4 my-10 relative">
 						<div className="left md:w-2/5 w-full flex-center">
 							<div className="w-full max-w-64 flex-center">
@@ -67,10 +67,10 @@ const Profile: React.FC = () => {
 								<img src={uiAvatarLink} className="image-full" />
 							</div>
 						</div>
-						<div className="right w-full md:w-2/5 flex flex-col">
-							<h1 className="text-5xl text-white my-4">{user.name}</h1>
-							<p className="text-lg text-white"><span className="font-bold">Email:</span> {user.email}</p>
-							<p className="text-lg text-white"><span className="font-bold">Phone:</span> {user.phone && user.phone}</p>
+						<div className="right w-full md:w-2/5 flex flex-col text-white">
+							<h1 className="text-5xl my-4">{user.name}</h1>
+							<p className="text-lg"><span className="font-bold">Email:</span> {user.email}</p>
+							<p className="text-lg"><span className="font-bold">Phone:</span> {user.phone && user.phone}</p>
 							<div
 								className="btn-custom-accent w-fit cursor-pointer mt-4"
 								onClick={() => handleSignOut()}

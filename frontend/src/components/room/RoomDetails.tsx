@@ -5,6 +5,7 @@ import { IoMdTime } from "react-icons/io";
 import { TbRulerMeasure } from "react-icons/tb";
 import { useRoomStore } from "../../store/useRoomStore";
 import { RoomApi } from "../../apis/roomApi";
+import RoomCarousel from "./RoomCarousel";
 
 const RoomDetails: React.FC = () => {
 	const roomId = useRoomStore(state => state.selectedRoom);
@@ -33,13 +34,12 @@ const RoomDetails: React.FC = () => {
 
 	return (
 		<>
+			<RoomCarousel type={roomDetails.type}/>
 			<div className="p-4 lg:px-10">
 				{/* heading */}
-				<h2 className=" text-black text-4xl font-bold">
-					{roomId} {roomDetails.name}
-				</h2>
+				<h2 className=" text-black text-4xl font-bold">{roomDetails.name}</h2>
 				{/* room features */}
-				<div className="features flex flex-col border m-4 md:mx-10 lg:mx-4 xl:mx-10 gap-7 p-3 rounded-xl text-gray-700 border-slate-300">
+				<div className="features flex flex-col border m-4 md:mx-10 lg:mx-4 xl:mx-10 gap-7 p-3 rounded-xl text-gray-700 border-slate-300 bg-gray-100">
 					<div className="row flex-evenly">
 						<div className="feature flex-center flex-col">
 							<FaHome className="text-2xl" />
@@ -78,7 +78,7 @@ const RoomDetails: React.FC = () => {
 
 				{/* description */}
 				<h3 className="text-2xl font-semibold">Description</h3>
-				<p className="line-clamp-2">{roomDetails.description}</p>
+				<p className="">{roomDetails.description}</p>
 			</div>
 			{/* book now */}
 			<div className="book-now flex justify-around items-center bg-custom-bg-dark rounded-t-xl mt-2 py-2">

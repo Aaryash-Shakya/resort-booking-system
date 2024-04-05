@@ -8,7 +8,7 @@ const UserDashboard: React.FC = () => {
 	return (
 		<>
 			<div className="w-full text-white">
-				<div role="tablist" className="tabs tabs-bordered my-4">
+				<div role="tablist" className="tabs tabs-bordered my-4 font-semibold">
 					<div
 						role="tab"
 						className={`tab text-white text-xl pb-10 ${currentTab === "history" ? "tab-active" : ""}`}

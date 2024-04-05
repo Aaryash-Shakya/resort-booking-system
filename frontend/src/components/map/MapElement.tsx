@@ -49,7 +49,7 @@ const MapElement: React.FC<MapElementProps> = ({ top, left, id, type }) => {
 			<ToastContainer />
 			<span
 				className={`${
-					id == selectedId && "animate-ping absolute inline-flex h-5 w-5 bg-green-300 rounded-full opacity-75"
+					id == selectedId && "animate-ping absolute inline-flex h-5 w-5 bg-blue-300 rounded-full"
 				}`}
 				style={{ top: `${top}`, left: `${left}`, translate: "-50% -50%" }}
 			></span>
@@ -57,12 +57,13 @@ const MapElement: React.FC<MapElementProps> = ({ top, left, id, type }) => {
 				className={`absolute h-6 w-6 cursor-pointer flex-center text-xl lg:text-2xl
 					${status == "available" ? "text-green-400" : ""} 
 					${status == "cleaning" && "text-green-400"} 
-					${status == "booked" ? "text-red-600" : "text-green-400"}`}
+					${status == "booked" ? "text-red-600" : "text-green-400"}
+					${id == selectedId && "text-[#5555ee]"} `}
 				style={{
 					top: `${top}`,
 					left: `${left}`,
 					translate: "-50% -50%",
-					color: `${id == selectedId ? "#55e" : ""}`,
+					// color: `${id == selectedId && status == "booked" ? "#55e" : ""}`,
 					cursor: `${status == "maintenance" && "not-allowed"}`,
 				}}
 				onClick={() => {
