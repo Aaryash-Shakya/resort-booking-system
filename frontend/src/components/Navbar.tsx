@@ -109,11 +109,7 @@ const Navbar: React.FC<NavbarProps> = ({ positionFixed }) => {
 								</ul>
 							</div>
 							<Link to="/" className="btn btn-ghost text-xl">
-								<img
-									src="../../../public/logo/logo-no-background.png"
-									alt="logo"
-									className="w-40 cursor-pointer hover:brightness-90"
-								/>
+								ResortUI
 							</Link>
 						</div>
 						{/* center nav */}
