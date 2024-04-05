@@ -21,6 +21,7 @@ import AdminSidebar from "./admin/AdminSidebar";
 import ViewHistory from "./admin/ViewHistory";
 import Payment from "./pages/Payment";
 import ManageUsers from "./admin/ManageUsers";
+import ViewRoom from "./admin/ViewRooms";
 
 const MyRoutes: React.FC = () => {
 	return (
@@ -49,6 +50,7 @@ const MyRoutes: React.FC = () => {
 					<Route path="dashboard" element={<AdminSidebar />} />
 					<Route path="history" element={<ViewHistory />} />
 					<Route path="manage-users" element={<ManageUsers />} />
+					<Route path="all-rooms" element={<ViewRoom />} />
 				</Route>
 				{/* exceptions */}
 				<Route path="/payment" element={<Payment />} />
